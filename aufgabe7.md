@@ -20,7 +20,7 @@ Es sind unterschiedliche Befehle, die jeweils durch eine pipe übergeben werden
 ## wieviele unterschiedliche png sind in dem Ordner und wieviele Versionen gibt es von jeder Datei
 Dies lässt sich mit folgendem Befehl lösen:
 ```bash
-find  -type f -name "*.png" -exec sha256sum {} + | sort | uniq -w 64 -c | sort -nr
+find . -type f -name "*.png" -exec sha256sum {} + | sort | uniq -w 64 -c | sort -nr
 ```
 1. Mit *find  -type f -name "*.png"* werden alle Dateien gesucht, die mit .png enden.
 2. mit *-exec sha256sum {} +* wird für jede dieser Dateien ein indivdueller hash vergeben (das + sorgt dafür, dass dies im batch Verfahren geschieht.) Dateien die ganz genau gleich sind haben auch den gleichen hash. So können also Dateien auch wenn sie unterschiedliche Namen haben als gleich erkannt werden.
