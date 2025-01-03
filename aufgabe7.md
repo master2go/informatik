@@ -12,6 +12,6 @@ Es sind unterschiedliche Befehle, die jeweils durch eine pipe übergeben werden
    werden soll. -type gibt an welche Arten von Dateien gesucht werden sollen. f steht für alle regulären Dateien, also zB keine symbolischen links. | Der gerade Strich ist eine
    Pipe, dh. das Ergebnis des find Befehls wird an sed weitergegeben
 2. *sed "s/.*\/.*\.//g"*
-   sed ist ein stream editor, also in gewissen SInn eine besondere Form von Texteditor. sed kann Texte durchsunchen, das gefunde löschen, ersetzen, austauschen usw. Im      vorliegenden Fall, wir dem Befehl sed folgendes gesagt: s = ersetzen . dieser Teil besagt was erstzt werden soll: .* = alles in diesem Verzeichnis /.* = alles im darunterliegenden Ordner
+   sed ist ein stream editor, also in gewissen SInn eine besondere Form von Texteditor. sed kann Texte durchsunchen, das gefunde löschen, ersetzen, austauschen usw. Im vorliegenden Fall, wird dem Befehl sed folgendes mit: *was* s = ersetzen. *wo und was* . dieser Teil besagt wo und was  ersetzt werden soll: .* = alles in diesem Verzeichnis /.* = alles im darunterliegenden Verzeicnis
 
    
